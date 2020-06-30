@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MySearchView">
+        <attr name="hint_text" format="string" />
+        <attr name="img_reference" format="reference" />
+        <attr name="visibility" format="boolean"/>
+    </declare-styleable>
+
+    <item name="tag_holder" type="id" />
+    <item name="tag_dict" type="id" />
+    <item name="tag_dest_point" type="id"/>
+    <item name="tag_overlay" type="id"/>
+    <item name="tag_history" type="id"/>
+
+</resources>

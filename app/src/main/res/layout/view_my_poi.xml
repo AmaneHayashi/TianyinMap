@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/poi_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:clickable="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/poi_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/poi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/poi_distance"
+                style="@style/poi_textview_style"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/poi_name" />
+
+            <TextView
+                android:id="@+id/poi_split"
+                style="@style/poi_textview_style"
+                android:layout_marginStart="6dp"
+                android:text="@string/poi_split"
+                android:textColor="@color/darkgrey"
+                app:layout_constraintLeft_toRightOf="@id/poi_distance"
+                app:layout_constraintTop_toBottomOf="@id/poi_name" />
+
+            <TextView
+                android:id="@+id/poi_address"
+                style="@style/poi_textview_style"
+                android:layout_marginStart="6dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toRightOf="@id/poi_split"
+                app:layout_constraintTop_toBottomOf="@id/poi_name" />
+
+            <TextView
+                android:id="@+id/poi_type"
+                style="@style/poi_textview_style"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/poi_distance" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_margin="15dp"
+                android:background="@color/about_white"
+                app:layout_constraintBottom_toTopOf="@id/poi_navigate"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/poi_type" />
+
+            <Button
+                android:id="@+id/poi_cancel"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/login_delete"
+                android:onClick="hidePoiView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/poi_navigate"
+                style="@style/poi_explore_btn"
+                android:background="@drawable/border_round_32_white"
+                android:drawableStart="@drawable/dir5"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/poi_navigate_text"
+                android:textColor="@color/black"
+                android:onClick="onNavigateClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/poi_route"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/poi_route"
+                style="@style/poi_explore_btn"
+                android:background="@drawable/border_round_32_blue"
+                android:drawableStart="@drawable/amap_man"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="@string/poi_route_text"
+                android:textColor="@color/white"
+                android:onClick="onPoiRouteClick"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <android.support.constraint.Group
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/poi_sub_group"
+                app:constraint_referenced_ids="poi_navigate,poi_route"/>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

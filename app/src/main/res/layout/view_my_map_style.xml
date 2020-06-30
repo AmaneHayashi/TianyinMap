@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/main_map_style_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/map_style_title"
+        android:gravity="center_horizontal"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_map_radios"/>
+
+    <RadioGroup
+        android:id="@+id/main_map_radios"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@id/main_map_default"
+        android:layout_margin="15dp"
+        app:layout_constraintWidth_percent="0.95"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_map_style_text">
+
+        <RadioButton
+            android:id="@+id/main_map_default"
+            style="@style/button_tag_style"
+            android:onClick="onMapStyleClick"
+            android:text="@string/map_style_normal" />
+
+        <RadioButton
+            style="@style/button_tag_style"
+            android:onClick="onMapStyleClick"
+            android:text="@string/map_style_traffic"/>
+
+        <RadioButton
+            style="@style/button_tag_style"
+            android:onClick="onMapStyleClick"
+            android:text="@string/map_style_satellite"/>
+
+        <RadioButton
+            style="@style/button_tag_style"
+            android:onClick="onMapStyleClick"
+            android:text="@string/map_style_night"/>
+
+        <RadioButton
+            style="@style/button_tag_style"
+            android:onClick="onMapStyleClick"
+            android:text="@string/map_style_personal"/>
+
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>

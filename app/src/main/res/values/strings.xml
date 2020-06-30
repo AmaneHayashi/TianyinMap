@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TianyinMap</string>
+    <string name="explore_activity">探索</string>
+    <string name="personal_activity">我的</string>
+
+    <!--layout中的组件命名-->
+    <string name="main_btn">首页</string>
+    <string name="explore_btn">探索</string>
+    <string name="my_btn">我的</string>
+
+    <string name="zoom_position">zoom显示及位置</string>
+    <string name="zoom_buttons">显示</string>
+    <string name="zoom_gestures">缩放手势</string>
+    <string name="zoom_in">+</string>
+    <string name="zoom_out">—</string>
+    <string name="scale">比例尺</string>
+    <string name="buttonScale">获取比例尺</string>
+    <string name="logo_position">logo位置</string>
+    <string name="bottom_left">左下</string>
+    <string name="bottom_center">底部居中</string>
+    <string name="bottom_right">右下</string>
+    <string name="center_right">右中</string>
+    <string name="compass">指南针</string>
+    <string name="mylocation_layer">我的位置图层</string>
+
+    <string name="poi_name_default">北京邮电大学</string>
+    <string name="poi_distance">距您</string>
+    <string name="poi_split">|</string>
+    <string name="poi_addr_default">西土城路10号</string>
+    <string name="poi_type_default">高校</string>
+    <string name="search_hint_default">查找地点、公交、地铁</string>
+    <string name="searching_hint_default">搜索</string>
+    <string name="search_choice_food">美食</string>
+    <string name="search_choice_hotel">酒店</string>
+    <string name="search_choice_scene">景点</string>
+    <string name="search_choice_stop">加油站</string>
+    <string name="search_choice_cinema">电影院</string>
+    <string name="search_choice_supermarket">超市</string>
+    <string name="search_history_more">更多历史记录</string>
+    <string name="search_history_clear">清空历史记录</string>
+
+    <string name="poi_nearby">在%s附近</string>
+    <string name="poi_detail_text">查看详情</string>
+    <string name="poi_navigate_text">导航</string>
+    <string name="poi_route_text">路线</string>
+    <string name="text_auto_fill">北京市</string>
+    <string name="search_str">搜  索</string>
+
+    <string name="search_result_ex">%s  ·  %s</string>
+
+    <string name="walk">步行%d米</string>
+    <string name="stations">%d站</string>
+
+    <string name="no_result">对不起，没有搜索到相关数据！</string>
+
+    <string name="map_style_normal">普通</string>
+    <string name="map_style_traffic">交通</string>
+    <string name="map_style_satellite">卫星</string>
+    <string name="map_style_night">夜间</string>
+    <string name="map_style_personal">自定义</string>
+    <string name="map_style_title"> · 地图风格 · </string>
+
+
+    <string name="route_plan_drive">驾驶规划</string>
+    <string name="route_plan_bus">公交规划</string>
+    <string name="route_plan_walk">步行规划</string>
+    <string name="route_details">路线详情</string>
+    <string name="map">地图</string>
+
+</resources>

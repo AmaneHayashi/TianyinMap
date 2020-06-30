@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/my_search_img"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/border_round_16_left"
+        android:onClick="onSearchImgClick"
+        app:layout_constraintRight_toLeftOf="@id/my_search_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/my_search_text"
+        android:layout_height="48dp"
+        android:layout_width="match_parent"
+        android:layout_marginStart="48dp"
+        android:background="@drawable/border_round_16_right"
+        android:textColorHint="@color/gray"
+        android:textSize="18sp"
+        android:maxLength="10"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/my_search_img"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="@string/text_auto_fill"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/my_search_cancel"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/login_delete"
+        android:onClick="onClearTextClick"
+        app:layout_constraintBaseline_toBaselineOf="@id/my_search_text"
+        app:layout_constraintRight_toLeftOf="@id/my_search_search"/>
+
+    <Button
+        android:id="@+id/my_search_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:text="@string/search_str"
+        android:textColor="@color/tian_blue"
+        android:textStyle="bold"
+        android:onClick="onSearchButtonClick"
+        app:layout_constraintBaseline_toBaselineOf="@id/my_search_text"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/my_search_text"/>
+
+    <android.support.constraint.Group
+        android:id="@+id/my_search_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="my_search_cancel,my_search_search" />
+
+
+</android.support.constraint.ConstraintLayout>

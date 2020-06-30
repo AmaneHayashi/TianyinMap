@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/my_detail_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/my_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/my_detail_distance"
+        style="@style/poi_textview_style"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_detail_name" />
+
+    <TextView
+        android:id="@+id/my_detail_split"
+        style="@style/poi_textview_style"
+        android:layout_marginStart="6dp"
+        android:text="@string/poi_split"
+        android:textColor="@color/darkgrey"
+        app:layout_constraintLeft_toRightOf="@id/my_detail_distance"
+        app:layout_constraintTop_toBottomOf="@id/my_detail_name" />
+
+    <TextView
+        android:id="@+id/my_detail_address"
+        style="@style/poi_textview_style"
+        android:layout_marginStart="6dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toRightOf="@id/my_detail_split"
+        app:layout_constraintTop_toBottomOf="@id/my_detail_name" />
+
+    <TextView
+        android:id="@+id/my_detail_type"
+        style="@style/poi_textview_style"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_detail_distance" />
+
+    <Button
+        android:id="@+id/my_detail_route"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:drawableStart="@drawable/dir5"
+        android:text="@string/poi_route_text"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:background="@drawable/bg_shadow_border"
+        android:textSize="12sp"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>

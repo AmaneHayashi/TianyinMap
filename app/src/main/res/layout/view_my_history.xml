@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RadioGroup
+        android:id="@+id/search_choice_radios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/search_edge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <RadioButton
+            android:id="@+id/search_choice_food"
+            style="@style/search_choice_btn"
+            android:onClick="onKeywordsClick"
+            android:text="@string/search_choice_food" />
+
+        <RadioButton
+            android:id="@+id/search_choice_hotel"
+            style="@style/search_choice_btn"
+            android:onClick="onKeywordsClick"
+            android:text="@string/search_choice_hotel" />
+
+        <RadioButton
+            android:id="@+id/search_choice_scene"
+            style="@style/search_choice_btn"
+            android:onClick="onKeywordsClick"
+            android:text="@string/search_choice_scene" />
+
+        <RadioButton
+            android:id="@+id/search_choice_stop"
+            style="@style/search_choice_btn"
+            android:onClick="onKeywordsClick"
+            android:text="@string/search_choice_stop" />
+
+        <RadioButton
+            android:id="@+id/search_choice_favourite"
+            style="@style/search_choice_btn"
+            android:onClick="onKeywordsClick"
+            android:text="@string/search_choice_cinema" />
+
+        <RadioButton
+            android:id="@+id/search_choice_more"
+            style="@style/search_choice_btn"
+            android:onClick="onKeywordsClick"
+            android:text="@string/search_choice_supermarket" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/search_edge"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/grey"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_choice_radios" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/search_edge"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ListView
+            android:id="@+id/search_history_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/search_history_clear"/>
+
+        <Button
+            android:id="@+id/search_history_clear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_up_down"
+            android:text="@string/search_history_clear"
+            android:onClick="onClearHistoryClick"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_history_list" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
